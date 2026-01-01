@@ -16,22 +16,9 @@
 #define NAV    8
 #define GAMING 9
 
-&mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <170>;
-};
 
 / {
     behaviors {
-        td_gaming: td_gaming {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_GAMING";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&none>, <&tog GAMING>;
-        };
     };
 
     keymap {
@@ -42,7 +29,7 @@
             bindings = <
              &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y     &kp U            &kp I        &kp O       &kp P
              &kp A       &kp S       &kp D        &kp F        &kp G        &kp H     &kp J            &kp K        &kp L       &kp SEMICOLON
-    &none      &kp Z       &kp X        &kp C        &kp V        &kp B        &kp N     &kp M            &kp COMMA    &kp DOT     &kp FSLH     &td_gaming
+    &none      &kp Z       &kp X        &kp C        &kp V        &kp B        &kp N     &kp M            &kp COMMA    &kp DOT     &kp FSLH     &none
                              &mo NUM    &mo LMOD     &mo NAV      &kp SPACE    &mo RMOD  &kp SPACE
             >;
         };
@@ -132,7 +119,7 @@
             bindings = <
              &kp Q     &kp F     &kp E     &kp R     &kp T     &kp Y     &kp U      &kp I      &kp O      &kp P
              &kp A     &kp S     &kp W     &kp D     &kp G     &kp H     &kp J      &kp K      &kp L      &kp SEMICOLON
-    &kp ESC  &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M      &kp COMMA  &kp DOT    &kp FSLH    &td_gaming
+    &kp ESC  &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M      &kp COMMA  &kp DOT    &kp FSLH    &none
                     &kp FSLH   &kp SPACE &kp ENTER &kp SPACE &kp SPACE &kp SPACE
             >;
         };
