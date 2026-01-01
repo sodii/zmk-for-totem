@@ -10,11 +10,11 @@
 #define LMOD2  2
 #define RMOD   3
 #define RMOD2  4
-#define BT    5
-#define NUM    6
-#define FN     7
-#define NAV    8
-#define GAMING 9
+#define NUM    5
+#define FN     6
+#define NAV    7
+#define GAMING 8
+#define BT    9
 
 
 / {
@@ -74,16 +74,6 @@
             >;
         };
 
-        bt_layer {
-            label = "BT";
-            bindings = <
-             &none   &none   &none    &none    &none    &none  &none   &none  &none  &bt BT_CLR
-             &kp LGUI &kp LALT &kp LSHFT &kp LCTRL &none &none  &bt BT_SEL 3 &bt BT_SEL 4 &none  &none
-    &none   &none   &none    &none    &none    &none   &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none
-                      &trans &trans   &trans   &none &none  &none
-            >;
-        };
-
         num_layer {
             label = "NUM";
             bindings = <
@@ -123,5 +113,16 @@
                     &kp FSLH   &kp SPACE &kp ENTER &kp SPACE &kp SPACE &kp SPACE
             >;
         };
+
+        bt_layer {
+            label = "BT";
+            bindings = <
+             &none   &none   &none    &none    &none    &none  &none   &none  &none  &bt BT_CLR
+             &kp LGUI &kp LALT &kp LSHFT &kp LCTRL &none &none  &bt BT_SEL 3 &bt BT_SEL 4 &none  &none
+    &none   &none   &none    &none    &none    &none   &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none
+                      &trans &trans   &trans   &none &none  &none
+            >;
+        };
+
     };
 };
